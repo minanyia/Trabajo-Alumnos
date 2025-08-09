@@ -1,18 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package controlador;
 
 import modelo.Alumno;
 
-/**
- *
- * @author marye
- */
+public class GrupoController {
 
-    public class GrupoController {
- 
     public double calcularPromedioFila(Alumno[] fila) {
         double suma = 0;
         for (Alumno a : fila) {
@@ -20,35 +11,41 @@ import modelo.Alumno;
         }
         return suma / fila.length;
     }
- 
+
     public double calcularPromedioGrupal(Alumno[][] grupo) {
         double suma = 0;
         int total = 0;
+
         for (Alumno[] fila : grupo) {
             for (Alumno a : fila) {
                 suma += a.getEdad();
                 total++;
             }
         }
+
         return suma / total;
     }
- 
+
     public int filaMasDestacada(Alumno[][] grupo) {
         double maxProm = 0;
         int filaDestacada = -1;
+
         for (int i = 0; i < grupo.length; i++) {
             double promFila = calcularPromedioFila(grupo[i]);
+
             if (promFila > maxProm) {
                 maxProm = promFila;
                 filaDestacada = i;
             }
         }
+
         return filaDestacada;
     }
- 
+
     public Alumno alumnoMasDestacado(Alumno[][] grupo) {
         Alumno mejor = null;
         double maxProm = 0;
+
         for (Alumno[] fila : grupo) {
             for (Alumno a : fila) {
                 if (a.getPromedio() > maxProm) {
@@ -57,8 +54,10 @@ import modelo.Alumno;
                 }
             }
         }
+
         return mejor;
     }
 }
+
     
 
