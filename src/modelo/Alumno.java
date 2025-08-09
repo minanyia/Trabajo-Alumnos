@@ -15,22 +15,32 @@ public class Alumno {
         return nombre;
     }
 
+    
+    
     public int getEdad() {
         return edad;
     }
 
+    
+    
     public String getCarrera() {
         return carrera;
     }
 
+    
+    
     public int getCuatrimestre() {
         return cuatrimestre;
     }
 
+    
+    
     public double getPromedio() {
         return promedio;
     }
 
+    
+    
     // Constructor que inicializa los atributos del alumno
     public Alumno(String nombre, int edad, String carrera, int cuatrimestre, double promedio) {
         this.nombre = nombre;
